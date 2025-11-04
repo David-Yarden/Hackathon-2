@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transactions</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>All Transactions</h1>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Amount</th>
+      <th>Category</th>
+      <th>Date</th>
+      <th>Note</th>
+    </tr>
+    <% transactions.forEach(t => { %>
+      <tr>
+        <td><%= t.id %></td>
+        <td><%= t.amount %></td>
+        <td><%= t.category %></td>
+        <td><%= t.date %></td>
+        <td><%= t.note %></td>
+      </tr>
+    <% }) %>
+  </table>
+  <a href="/">Back to Dashboard</a>
+</body>
+</html>
