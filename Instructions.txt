@@ -1,0 +1,41 @@
+Hackathon Topics and Guidelines:
+
+
+Must Use:
+
+Node.js, Express, JavaScript, HTML, CSS, EJS (optional), and a database.
+
+
+Do Not Use:
+
+Python, React, or any other languages/frameworks we haven’t covered yet.
+
+
+Suggested Project Ideas:
+
+    Real-Time Chat Application
+    Personalized To-Do List
+    Weather Dashboard
+    Recipe Sharing Platform
+    Interactive Quiz App
+    E-Commerce Mini-Store
+    Portfolio Builder
+    Collaborative Drawing App
+    Fitness Tracker
+    Simple Blogging Platform
+    Language Learning Game
+    Budget Tracker
+    Travel Planner
+    Music Playlist Manager
+
+
+Step of Innovation
+
+    DISCOVERY :Identify the strategic focus area, translate into themes of innovation & problem statement
+    IDEATION : idea collection & idea gratuation, bottoms-up ideation os trategic goals
+    PC CREATION : conceptualize idea, check for novelty, functionality, feasbility, alignment to strategic goals
+    EXECUTION : test the POC for feasability, market viability & scale
+
+Please ask your instructor to add you for Hackathon2 assignments.
+
+To be submitted when the project is done.
