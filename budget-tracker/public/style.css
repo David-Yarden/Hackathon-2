@@ -1,18 +1,99 @@
-body {
+/* Reset basique */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
-  margin: 20px;
 }
 
+/* Body */
+body {
+  background-color: #f5f6fa;
+  color: #2f3640;
+  padding: 20px;
+}
+
+/* Titres */
+h1, h2 {
+  margin-bottom: 20px;
+  color: #192a56;
+}
+
+/* Sections */
+section {
+  margin-bottom: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Formulaire */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 150px;
+  font-size: 14px;
+}
+
+form input, form select {
+  padding: 8px;
+  border: 1px solid #dcdde1;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #273c75;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: background 0.2s;
+}
+
+form button:hover {
+  background-color: #40739e;
+}
+
+/* Liens */
+a {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #40739e;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Tableau transactions */
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 10px;
 }
 
-th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
+table th, table td {
+  padding: 10px;
+  border: 1px solid #dcdde1;
+  text-align: left;
 }
 
-th {
-  background-color: #f2f2f2;
+table th {
+  background-color: #40739e;
+  color: #fff;
+}
+
+table tr:nth-child(even) {
+  background-color: #f1f2f6;
 }

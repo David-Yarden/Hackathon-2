@@ -1,8 +1,6 @@
-import { openDB } from "../db/db.js";
+import transactions from "../db/db.js";
 
 export async function getDashboard(req, res) {
-  const db = await openDB();
-  const transactions = await db.all("SELECT * FROM transactions");
   const totalIncome = transactions.filter(t => t.amount > 0).reduce((a,b)=>a+b.amount,0);
   const totalExpense = transactions.filter(t => t.amount < 0).reduce((a,b)=>a+b.amount,0);
   const balance = totalIncome + totalExpense;
@@ -10,14 +8,18 @@ export async function getDashboard(req, res) {
 }
 
 export async function getTransactions(req, res) {
-  const db = await openDB();
-  const transactions = await db.all("SELECT * FROM transactions ORDER BY date DESC");
-  res.render("transactions", { transactions });
+  const sorted = transactions.slice().sort((a,b) => new Date(b.date) - new Date(a.date));
+  res.render("transactions", { transactions: sorted });
 }
 
 export async function addTransaction(req, res) {
   const { amount, category, date, note } = req.body;
-  const db = await openDB();
-  await db.run("INSERT INTO transactions (amount, category, date, note) VALUES (?, ?, ?, ?)", [amount, category, date, note]);
+  transactions.push({
+    id: transactions.length + 1,
+    amount: Number(amount),
+    category,
+    date,
+    note
+  });
   res.redirect("/");
 }
