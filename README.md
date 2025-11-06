@@ -23,12 +23,12 @@ It helps users visualize their income, expenses, and balance through an elegant 
 
 ## 🚀 Features
 
-✨ **Interactive Dashboard** — clear summary of all finances  
-📊 **Donut Chart** — live visualization of income vs expenses  
-🌙 **Dark / Light Mode** — instant theme switching  
-📄 **Export to PDF** — generate financial report snapshots  
-🗑️ **Add / Delete Transactions** — simple and quick management  
-💾 **PostgreSQL Integration** — persistent data storage  
+- ✨ **Interactive Dashboard** — clear summary of all finances  
+- 📊 **Donut Chart** — live visualization of income vs expenses  
+- 🌙 **Dark / Light Mode** — instant theme switching  
+- 📄 **Export to PDF** — generate financial report snapshots  
+- 🗑️ **Add / Delete Transactions** — simple and quick management  
+- 💾 **PostgreSQL Integration** — persistent data storage  
 
 ---
 
@@ -94,7 +94,7 @@ Built for Hackathon 2 (2-day challenge)
     Tools: VSCode, GitHub, PostgreSQL, EJS
 
 <div align="center">
-⭐ If you like this project, give it a star!
 
+⭐ If you like this project, give it a star!
 Made with ❤️ by David & Michael.
 </div> ```
