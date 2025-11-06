@@ -78,8 +78,6 @@ export default pool;
 5️⃣ Start the app
 ```npm start```
 Then open 👉 http://localhost:3000
-🖼️ Preview
-<div align="center"> <img src="https://via.placeholder.com/900x500?text=Budget+Tracker+Dashboard" alt="Dashboard Preview" width="80%"> <br/> <i>Modern dashboard view with dark mode and dynamic chart.</i> </div>
 👨‍💻 Authors
 Name	Role
 David Jordan	Backend & UI
