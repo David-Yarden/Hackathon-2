@@ -49,7 +49,7 @@ It helps users visualize their income, expenses, and balance through an elegant 
 ### 1️⃣ Clone the repo
 ```bash
 git clone https://github.com/yourusername/budget-tracker.git
-cd budget-tracker
+cd budget-tracker ```
 
 2️⃣ Install dependencies
 
