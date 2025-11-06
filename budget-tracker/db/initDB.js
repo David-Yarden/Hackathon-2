@@ -1,27 +1,22 @@
-import sqlite3 from "sqlite3";
-import { open } from "sqlite";
-import dotenv from "dotenv";
+import pool from './db.js';
 
-dotenv.config();
-
-async function init() {
-  const db = await open({
-    filename: process.env.DB_PATH,
-    driver: sqlite3.Database
-  });
-
-  await db.exec(`
-    CREATE TABLE IF NOT EXISTS transactions (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      amount REAL NOT NULL,
-      category TEXT NOT NULL,
-      date TEXT NOT NULL,
-      note TEXT
-    )
-  `);
-
-  console.log("Database and table 'transactions' created or already exist.");
-  await db.close();
-}
+const init = async () => {
+  try {
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS transactions (
+        id SERIAL PRIMARY KEY,
+        title VARCHAR(100),
+        amount NUMERIC,
+        type VARCHAR(20),
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      );
+    `);
+    console.log('✅ Table transactions prête');
+  } catch (err) {
+    console.error('❌ Erreur initDB:', err);
+  } finally {
+    pool.end();
+  }
+};
 
 init();

@@ -1,21 +1,25 @@
 import express from "express";
-import path from "path";
-import { fileURLToPath } from "url";
-import transactionRoutes from "./routes/transactionRoutes.js";
+import dotenv from "dotenv";
+import transactionsRouter from "./routes/transactionRoutes.js";
+import pool from "./db/db.js";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
+app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
 
-// Routes
-app.use("/", transactionRoutes);
+app.use("/", transactionsRouter);
+
+try {
+  const result = await pool.query("SELECT NOW()");
+  console.log("✅ Database connected:", result.rows[0]);
+} catch (err) {
+  console.error("❌ DB connection error:", err);
+}
 
 app.listen(PORT, () => {
   console.log(`✅ Server running on http://localhost:${PORT}`);
