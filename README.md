@@ -74,12 +74,15 @@ const pool = new Pool({
 export default pool;
 ```
 4️⃣ Initialize the tables
-```npm run initdb```
+```
+npm run initdb
+```
 5️⃣ Start the app
-```npm start```
+```
+npm start
+```
 Then open 👉 http://localhost:3000
-👨‍💻 Authors
-Name	Role
+👨‍💻 Authors:
 David Jordan	Backend & UI
 Michael Fellous	Database & Logic
 
