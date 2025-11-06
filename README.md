@@ -53,11 +53,15 @@ cd budget-tracker
 ```
 
 2️⃣ Install dependencies
-```npm install```
+```
+npm install
+```
 
 3️⃣ Configure the database
 Create a PostgreSQL database:
-```CREATE DATABASE hackathon_db;```
+```
+CREATE DATABASE hackathon_db;
+```
 Then update /db/db.js with your credentials:
 ```
 import pkg from "pg";
