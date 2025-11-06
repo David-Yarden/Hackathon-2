@@ -81,8 +81,8 @@ npm run initdb
 ```
 npm start
 ```
-Then open 👉 http://localhost:3000
-👨‍💻 Authors:
-David Jordan	Backend & UI
-Michael Fellous	Database & Logic
+Then open 👉 http://localhost:3000  
+👨‍💻 Authors:  
+David Jordan	Backend & UI  
+Michael Fellous	Database & Logic  
 
