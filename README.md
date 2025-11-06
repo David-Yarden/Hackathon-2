@@ -48,7 +48,7 @@ It helps users visualize their income, expenses, and balance through an elegant 
 
 ### 1️⃣ Clone the repo
 ```
-git clone https://github.com/yourusername/budget-tracker.git
+git clone https://github.com/David-Yarden/Hackathon-2.git
 cd budget-tracker
 ```
 
